@@ -1,0 +1,27 @@
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+body{
+    background: #eee;
+    background-color: rgb(26, 23, 23);
+    color: #ffffff;
+}
+
+#side_nav{
+    background: #000;
+    min-width: 250px;
+    max-width: 250px;
+}
+.content{
+    min-height: 100vh;
+    width: 100%;
+}
+hr.h-color{
+    background: #eee;
+}
+.sidebar li.active{
+    background: #eee;
+    border-radius: 8px;
+}

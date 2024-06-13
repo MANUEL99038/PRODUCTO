@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="dark-mode.css" type="text/css">
+    
+</head>
+<body>
+    <div class="main-container d-flex">
+        <div class="sidebar bg-dark text-white" id="side_nav">
+            <div class="header-box px-3 pt-3 pb-4">
+                <h1 class="fs-4"><span class="bg-white text-dark rounded shadow px-2 me-2">CL</span>codigo</h1>
+                <button class="btn close-btn px-1 py-0 text-white"></button>
+            </div>
+            <ul class="list-unstyled px-2">
+                <li><a href="https://www.facebook.com/" class="text-decoration-none px-3 py-2 d-block">Link de navegacion 1</a></li>
+                <li><a href="https://www.utpuebla.edu.mx/identidad/index.html#calendario" class="text-decoration-none px-3 py-2 d-block">Link de navegacion 2</a></li>
+                <li><a href="http://avirtual.utpuebla.edu.mx/moodle/login/index.php" class="text-decoration-none px-3 py-2 d-block">Link de navegacion 3</a></li>
+                <li><a href="index2.html" class="text-decoration-none px-3 py-2 d-block">Pagina 2</a></li>
+                <li><a href="terceraPagina.html" class="text-decoration-none px-3 py-2 d-block">Pagina 3</a></li>
+            </ul>
+            <hr class="h-color mx-3">
+            <ul class="list-unstyled px-2">
+                <li><a href="2.jpg" download  class="text-decoration-none px-3 py-2 d-block">Link de descarga 1</a></li>
+                <li><a href="3.jpg" download  class="text-decoration-none px-3 py-2 d-block">Link de descarga 2</a></li>
+            </ul>
+            <div class="text-center mt-4">
+                <img src="1.jpg" alt="Descripción de la imagen" class="img-fluid">
+                <img src="dancing-cat-33.gif" alt="Descripción del GIF" class="img-fluid mt-2">
+            </div>
+        </div>
+        <div class="content">
+            <h2 style="color: white;">Alumnos</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card rounded-0 mb-4">
+                            <div class="card-header bg-light">
+                                <h6 class="font-weight-bold mb-0" style="color: black;">Número de alumnos aprobados</h6>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="myChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="card rounded-0">
+                            <div class="card-header bg-light">
+                                <h6 class="font-weight-bold mb-0" style="color: black;">Detalles de Alumnos</h6>
+                            </div>
+                            <div class="card-body">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">First</th>
+                                            <th scope="col">Last</th>
+                                            <th scope="col">Handle</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Manuel</td>
+                                            <td>Perez</td>
+                                            <td>@manuel</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Misael</td>
+                                            <td>Emilio</td>
+                                            <td>@misael</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="Marcos">3</th>
+                                            <td colspan="2">Marcos</td>
+                                            <td>@marcos</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js" integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+                const ctx = document.getElementById('myChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
+                        datasets: [{
+                            label: '# num. Alumnos',
+                            data: [12, 19, 3, 5, 2, 3],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
+        </div>
+    </div>
+</body>
+</html>
+
